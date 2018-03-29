@@ -11,16 +11,10 @@ def containsDuplicate(nums):
     :type nums: List[int]
     :rtype: bool
     """
-    if len(nums) <= 1:
-        return False
-    res = nums[0]
-    for i in range(1, len(nums)):
-        res = res ^ nums[i]
-    if res == 0:
-        return True
-    return False
+    s = set(nums)
+    return len(s) != len(nums)
 
 
 if __name__ == '__main__':
-    nums = [1,2,3,1]
-    print()
+    nums = [1, 2, 3]
+    print(containsDuplicate(nums))

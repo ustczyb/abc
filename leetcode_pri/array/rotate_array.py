@@ -17,7 +17,7 @@ def rotate(nums, k):
     :rtype: void Do not return anything, modify nums in-place instead.
     """
     n = len(nums)
-    nums[:] = nums[n - k:] + nums[:n - k]
+    nums[1:] = nums[n - k:] + nums[:n - k]
 
 
 # 翻转[i, j-1]
@@ -36,3 +36,5 @@ if __name__ == '__main__':
     nums = range(1, 7)
     rotate(nums, 3)
     print(nums)
+    # nums = nums[3:] + nums[:3]
+    # print(nums)
