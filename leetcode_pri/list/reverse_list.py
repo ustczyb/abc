@@ -39,4 +39,4 @@ if __name__ == '__main__':
     p2 = ListNode(2)
     p1.next = p2
     p = reverseList(p1)
-    print p.val
+    print(p.val)
